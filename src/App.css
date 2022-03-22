@@ -142,7 +142,7 @@
   font-size: 20px;
   font-weight: bold;
   color:aqua;
-  margin-top: 50px;
+  margin-top: 30px;
   padding:50px
 }
 .inputd input{
@@ -210,6 +210,7 @@
 .input{
   display:flex;
   justify-content: center;
+  margin-bottom: 17px;
 }
 
 .input input{
