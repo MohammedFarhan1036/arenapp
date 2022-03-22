@@ -245,6 +245,18 @@
 
 
 }
+@media (max-width:400px){
+  .li{
+    background: white;
+    
+    padding:2px;
+    min-height: 25px;
+  }
+  .li p{
+    font-size: 0.7rem;
+  }
+
+}
 
 
 

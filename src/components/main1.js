@@ -23,6 +23,7 @@ componentDidMount(){
     socket.on('message',data=>{
         console.log(data.name)
         this.settingstate(data);
+        window.scrollBy(0,2000)
     
     })
     socket.on('typing',data=>{
