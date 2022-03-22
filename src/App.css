@@ -2,7 +2,7 @@
   text-align: center;
   /* line-height: 0%; */
   position: absolute;
-  height: 100vh;
+  height: 80vh;
   top:50%;
   left:50%;
   transform: translate(-50%,-50%);
@@ -62,6 +62,7 @@
   overflow-y: auto;
   /* transform: translate(-50%,0); */
   margin-bottom: 10px;
+  margin-top: 10%;
   
 
 
@@ -80,7 +81,7 @@
 }
 .displayinput{
   border-radius: 10px;
-  height:100vh;
+  height:100%;
   WIDTH:100vw;
   BORDER:2PX SOLID RED;
   position:relative;
@@ -105,6 +106,8 @@
   border: 2px solid grey;
   left:8%;
   width:50px;
+  margin-top: 10%;
+
 
 }
 .pa{
@@ -123,7 +126,9 @@
   font-size: 30px;
   font-family: 'Merriweather', serif;
   font-weight: bold;
-  color:#c200fd
+  color:#c200fd;
+  margin-top: 10%;
+
 }
 .inputd{
   display:flex;
