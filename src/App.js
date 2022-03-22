@@ -1,23 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+import Main1 from './components/main1.js'
+
+const {io}= require("socket.io-client")
 
 function App() {
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <Main1/>     
     </div>
   );
 }
