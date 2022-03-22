@@ -4,7 +4,7 @@ import { Socket } from 'socket.io-client';
 import Input from'./input.js'
 import Main from './main.js'
 const {io}= require("socket.io-client")
-const socket= io('http://localhost:8000')
+const socket= io('https://young-eyrie-15600.herokuapp.com/')
 
 
 class Main1 extends Component {
@@ -73,13 +73,17 @@ componentDidMount(){
         socket.emit('typing','typing')
 }
 onsubmit=()=>{
-    socket.emit('message',this.state.message)
-    let msg=[...this.state.messages]
-    msg=[...msg,{name:"You",message:this.state.message,class:"flex-end"}]
-    this.setState({messages:msg})
-    this.setState({message:""},()=>{
-        console.log(this.state)
-    })
+    
+    if(this.state.message.length>0){
+
+        socket.emit('message',this.state.message)
+        let msg=[...this.state.messages]
+        msg=[...msg,{name:"You",message:this.state.message,class:"flex-end"}]
+        this.setState({messages:msg})
+        this.setState({message:""},()=>{
+            console.log(this.state)
+        })
+    }
 }
     renderthis=()=>{
         switch(this.state.count){

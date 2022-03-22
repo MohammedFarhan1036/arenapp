@@ -3,7 +3,7 @@ import Message from "./message.js"
 import {Socket} from 'socket.io-client'
 const {io}= require("socket.io-client")
 
-const socket= io('http://localhost:8000')
+const socket= io('https://young-eyrie-15600.herokuapp.com/')
 
 
 class Main extends Component {
