@@ -31,11 +31,12 @@ class Main extends Component {
                                     <Message key={index} name={message.name} message={message.message}/>
                                     </li>)}</ul>
 
+                    <p>{this.props.typing}</p>
                     </div>
         
                     <div className='input'>
-                            <input  value={this.props.value}onChange={this.props.change}></input>
-                            <button onClick={this.props.click}>submit</button>
+                            <input className='form-control' value={this.props.value}onChange={this.props.change}></input>
+                            <button className='btn btn-dark btn-sm' onClick={this.props.click}>Send</button>
                     </div>
                 </div>
                 

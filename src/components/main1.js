@@ -12,6 +12,7 @@ class Main1 extends Component {
     count:1 ,
     message:"",
     log:"",
+    typing:"",
 messages:[]} 
 componentDidMount(){
     socket.on('user-joined',data=>{
@@ -23,6 +24,14 @@ componentDidMount(){
         console.log(data.name)
         this.settingstate(data);
     
+    })
+    socket.on('typing',data=>{
+        this.setState({typing:data},()=>{
+            setTimeout(()=>{
+                this.setState({typing:""})
+            },1000)
+
+            })
     })
 
     }
@@ -60,6 +69,7 @@ componentDidMount(){
     }
     onchange=(e)=>{
         this.setState({message:e.target.value},()=>console.log(this.state))
+        socket.emit('typing','typing')
 }
 onsubmit=()=>{
     socket.emit('message',this.state.message)
@@ -73,7 +83,7 @@ onsubmit=()=>{
     renderthis=()=>{
         switch(this.state.count){
           case 1:return <Input log={this.state.log} click={this.onclick}  name={this.onnamechange}/>
-          case 2:return <Main click={this.onsubmit} value={this.state.message} change={this.onchange} clicks={this.onclicks} messages={this.state.messages}/>
+          case 2:return <Main typing={this.state.typing} click={this.onsubmit} value={this.state.message} change={this.onchange} clicks={this.onclicks} messages={this.state.messages}/>
     
         }
       }
