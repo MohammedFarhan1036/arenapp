@@ -59,7 +59,7 @@
   height:85vh;
   margin-top: 10px;
   border-radius: 10px;
-  min-width:95vw;
+  width:95%;
   /* left:50%; */
   overflow-y: auto;
   /* transform: translate(-50%,0); */

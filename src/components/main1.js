@@ -29,7 +29,7 @@ componentDidMount(){
         this.setState({typing:data},()=>{
             setTimeout(()=>{
                 this.setState({typing:""})
-            },1000)
+            },1500)
 
             })
     })
