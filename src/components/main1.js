@@ -9,7 +9,7 @@ const socket= io('https://young-eyrie-15600.herokuapp.com/')
 
 class Main1 extends Component {
     state = {  name:"",
-    count:1 ,
+    count:1,
     message:"",
     log:"",
     typing:"",
@@ -21,7 +21,6 @@ componentDidMount(){
     
     })
     socket.on('message',data=>{
-        console.log(data.name)
         this.settingstate(data);
         window.scrollBy(0,2000)
     
@@ -44,10 +43,9 @@ componentDidMount(){
     }
     onnamechange=(e)=>{
         this.setState({name:e.target.value})
-        console.log(this.state.name)
     }
     onclick=(e)=>{
-        console.log(this.state.name)
+        
         if(this.state.name.length>0){
 
             this.setState({count:2})
@@ -65,11 +63,10 @@ componentDidMount(){
        
     }
     onclicks=()=>{
-        console.log("eee")
         socket.emit('test',"arena")
     }
     onchange=(e)=>{
-        this.setState({message:e.target.value},()=>console.log(this.state))
+        this.setState({message:e.target.value})
         socket.emit('typing','typing')
 }
 onsubmit=()=>{
