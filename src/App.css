@@ -160,12 +160,12 @@
 .inputd button{
   width:40%;
   height:10%;
-  color:red;
+  color:black;
   font-weight: bold;
-  background: none;
+  background: rgb(81, 83, 231);
   outline: none;
   border: 2px solid black;
-  border-radius: 5px;
+  border-radius: 20px;
   padding: 5px;
   margin-top: 50px;
   font-family: 'Merriweather', serif;
@@ -264,7 +264,7 @@
     min-height: 25px;
   }
   .container{
-    height:80vh;
+    height:70vh;
   }
   .li p{
     font-size: 0.7rem;
