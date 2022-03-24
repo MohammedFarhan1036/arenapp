@@ -59,7 +59,7 @@
   height:85vh;
   margin-top: 10px;
   border-radius: 10px;
-  min-width:100vw;
+  min-width:95vw;
   /* left:50%; */
   overflow-y: auto;
   /* transform: translate(-50%,0); */
@@ -255,12 +255,16 @@
 
 
 }
-@media (max-width:400px){
+@media (max-width:500px){
   .li{
     /* background: white; */
+
     
     padding:2px;
     min-height: 25px;
+  }
+  .container{
+    height:80vh;
   }
   .li p{
     font-size: 0.7rem;
