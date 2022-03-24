@@ -53,13 +53,13 @@
 }
 .container{
   /* position:relative; */
-  /* border: 3px solid rgb(117, 21, 161); */
+  border: 3px solid rgb(0, 0, 0);
   /* background-color: blue; */
   /* background-color: rgba(0,0,0,0.7); */
-  height:75%;
+  height:85vh;
   margin-top: 10px;
   border-radius: 10px;
-  min-width:90vw;
+  min-width:100vw;
   /* left:50%; */
   overflow-y: auto;
   /* transform: translate(-50%,0); */
@@ -99,7 +99,7 @@
 }
 .img{
   background-image: url("./logo1.jpg");
-  height: 50px;
+  height: 30px;
   background-position: center;
   background-size: cover;
   border-radius: 20px;
@@ -108,7 +108,7 @@
   border: 2px solid grey;
   left:8%;
   width:50px;
-  margin-top: 10%;
+  margin-top: 2%;
 
 
 }
@@ -128,8 +128,8 @@
   font-size: 30px;
   font-family: 'Merriweather', serif;
   font-weight: bold;
-  color:#c200fd;
-  margin-top: 10%;
+  color:#000000;
+  margin-top: 2%;
 
 }
 .inputd{
@@ -211,7 +211,7 @@
 
 .input{
   position: absolute;
-  bottom:2px;
+  bottom:10px;
   width:100%;
   left:50%;
   transform:translate(-50%,0%);
