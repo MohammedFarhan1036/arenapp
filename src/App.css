@@ -59,7 +59,7 @@
   height:85vh;
   margin-top: 10px;
   border-radius: 10px;
-  width:95%;
+  width:95vw;
   /* left:50%; */
   overflow-y: auto;
   /* transform: translate(-50%,0); */
@@ -77,7 +77,7 @@
   /* border:2px solid red; */
   padding-inline-start: 0px;
   justify-content: flex-start;
-  padding: 20px;
+  padding: 10px;
   margin: 0px;
 
 }
@@ -264,7 +264,7 @@
     min-height: 25px;
   }
   .container{
-    height:72vh;
+    width:95vw;
   }
  
   .li p{
