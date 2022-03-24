@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/arenapp/static/css/main.2aaf8bcc.css",
+    "main.css": "/arenapp/static/css/main.816a7013.css",
     "main.js": "/arenapp/static/js/main.d6d23d9a.js",
     "static/js/787.72840722.chunk.js": "/arenapp/static/js/787.72840722.chunk.js",
     "static/media/bg.jpg": "/arenapp/static/media/bg.1cfbb6b5d538d0bcdecf.jpg",
     "index.html": "/arenapp/index.html",
-    "main.2aaf8bcc.css.map": "/arenapp/static/css/main.2aaf8bcc.css.map",
+    "main.816a7013.css.map": "/arenapp/static/css/main.816a7013.css.map",
     "main.d6d23d9a.js.map": "/arenapp/static/js/main.d6d23d9a.js.map",
     "787.72840722.chunk.js.map": "/arenapp/static/js/787.72840722.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2aaf8bcc.css",
+    "static/css/main.816a7013.css",
     "static/js/main.d6d23d9a.js"
   ]
 }
