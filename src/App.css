@@ -263,6 +263,9 @@
     padding:2px;
     min-height: 25px;
   }
+  .container{
+    height:72vh;
+  }
  
   .li p{
     font-size: 0.7rem;
