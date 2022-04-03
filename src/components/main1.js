@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import { Socket } from 'socket.io-client';
 
 import Input from'./input.js'
 import Main from './main.js'
 const {io}= require("socket.io-client")
-const socket= io('https://young-eyrie-15600.herokuapp.com/')
+//const socket= io('http://localhost:5500')
+const socket= io('https://mysterious-headland-30906.herokuapp.com')
 
 
 class Main1 extends Component {
@@ -15,21 +15,23 @@ class Main1 extends Component {
     typing:"",
 messages:[]} 
 componentDidMount(){
+    console.log("hello")
     socket.on('user-joined',data=>{
-        console.log(data)
         this.settingstate(data);
     
     })
     socket.on('message',data=>{
+        console.log(data)
         this.settingstate(data);
         window.scrollBy(0,2000)
     
     })
     socket.on('typing',data=>{
+        console.log('typing')
         this.setState({typing:data},()=>{
             setTimeout(()=>{
                 this.setState({typing:""})
-            },1500)
+            },2000)
 
             })
     })
@@ -49,6 +51,22 @@ componentDidMount(){
         if(this.state.name.length>0){
 
             this.setState({count:2})
+            //fetch('http://localhost:5500/message',{
+           /*fetch('https://mysterious-headland-30906.herokuapp.com/message',{
+            method:'post',
+            headers:{'Content-Type':'application/json'},
+            body:JSON.stringify({name:"Farhan"})
+            }).then(res=>res.json()).then(messages=>{
+                messages.forEach(message => {
+                    let messages=[...this.state.messages]
+                    let class1= message.name===this.state.name?'flex-end':'';
+                    let name=message.name===this.state.name?'You':message.name;
+                     messages=[...messages,{name,message:message.message,class:class1}]
+                     this.setState({messages})
+                    
+                })
+            })*/
+            socket.emit('new-user',this.state.name)
         }
         else{
             this.setState({log:"Please Enter Your Name To Enter Chat!"})
@@ -59,7 +77,6 @@ componentDidMount(){
 
         }
         
-        socket.emit('new-user',this.state.name)
        
     }
     onclicks=()=>{
@@ -78,7 +95,6 @@ onsubmit=()=>{
         msg=[...msg,{name:"You",message:this.state.message,class:"flex-end"}]
         this.setState({messages:msg})
         this.setState({message:""},()=>{
-            console.log(this.state)
         })
     }
 }
